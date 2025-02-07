@@ -254,7 +254,8 @@ export default defineComponent({
           precio: 235,
           descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
           imagen: [
-            '/imagenes/catalogo/remera-negra-ula.jpg',
+            '/imagenes/catalogo/remera-negra-ula-1.jpg',
+            '/imagenes/catalogo/remera-negra-ula-2.jpg',
             '/imagenes/catalogo/remera-negra-ula-modelo-1.jpg',
             '/imagenes/catalogo/remera-negra-ula-modelo-2.jpg',
             '/imagenes/catalogo/remera-negra-ula-modelo-3.jpg'
