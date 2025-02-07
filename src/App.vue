@@ -69,6 +69,7 @@
     <!--FOOTER-->
     <v-footer class="bg-azul">
       <v-row>
+        <h2 class="ml-3 mt-2">Contacto</h2>
         <v-col 
         cols="12" 
         v-for="(redes,index) in redesSociales" 
@@ -102,12 +103,7 @@ export default {
         {
           nombres: 'Instagram',
           iconos: 'mdi-instagram',
-          link: 'https://www.instagram.com/'
-        },
-        {
-          nombres: 'Gmail',
-          iconos: 'mdi-gmail',
-          link: 'https://workspace.google.com/intl/es-419_ar/gmail/'
+          link: 'https://www.instagram.com/_lagranola__/'
         }
       ],
       barraLat: [
