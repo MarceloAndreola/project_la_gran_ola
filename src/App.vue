@@ -69,7 +69,7 @@
     <!--FOOTER-->
     <v-footer class="bg-azul">
       <v-row>
-        <h2 class="ml-3 mt-2">Contacto</h2>
+        <h2 class="ml-3 mt-2">Contactos</h2>
         <v-col 
         cols="12" 
         v-for="(redes,index) in redesSociales" 

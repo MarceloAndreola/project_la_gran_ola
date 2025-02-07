@@ -198,7 +198,7 @@
           </v-col>
         </v-row>
       </v-card-actions>
-      <h5 class="d-flex justify-center" style="color: #BDBDBD;">Consultar por stock disponible</h5>
+      <h5 class="d-flex justify-center" style="color: #BDBDBD;">Consultar por stock y talles disponibles</h5>
     </v-card>
   </v-col>
 </v-row>
@@ -250,9 +250,9 @@ export default defineComponent({
         ],
       productos: [
         {
-          nombre: 'Overzide Hula negra',
-          precio: 235,
-          descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
+          nombre: 'Remera oversize Hula negra',
+          precio: 25000,
+          descripcion: 'Remera Oversize negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
           imagen: [
             '/imagenes/catalogo/remera-negra-ula-1.jpg',
             '/imagenes/catalogo/remera-negra-ula-2.jpg',
@@ -262,45 +262,58 @@ export default defineComponent({
             ]
         },
         {
-          nombre: 'Overzide Hula blanca',
-          precio: 126,
-          descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
+          nombre: 'Remera overzide Hula blanca',
+          precio: 25000,
+          descripcion: 'Remera Oversize blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
           imagen: [
-            '/imagenes/catalogo/remera-blanca-ula.jpg',
+            '/imagenes/catalogo/remera-blanca-ula-1.jpg',
+            '/imagenes/catalogo/remera-blanca-ula-2.jpg',
             '/imagenes/catalogo/remera-blanca-ula-modelo-1.jpg'
           ]
         },
         {
-          nombre: 'Overzide Hula verde',
-          precio: 384,
-          descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
+          nombre: 'Remera overzide Hula verde',
+          precio: 25000,
+          descripcion: 'Remera Oversize verde 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
           imagen: [
-            '/imagenes/catalogo/remera-verde-ula.jpg',
+            '/imagenes/catalogo/remera-verde-ula-1.jpg',
+            '/imagenes/catalogo/remera-verde-ula-2.jpg',
             '/imagenes/catalogo/remera-verde-ula-modelo-1.jpg'
           ]
         },
         {
-          nombre: 'Overzide surfer negra',
-          precio: 114,
-          descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
+          nombre: 'Remera overzide surfer negra',
+          precio: 25000,
+          descripcion: 'Remera Oversize negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
           imagen: [
-            '/imagenes/catalogo/remera-negra-surfer.jpg',
+            '/imagenes/catalogo/remera-negra-surfer-1.jpg',
+            '/imagenes/catalogo/remera-negra-surfer-2.jpg',
             '/imagenes/catalogo/remera-negra-surfer-modelo-1.jpg',
             '/imagenes/catalogo/remera-negra-surfer-modelo-2.jpg'
           ]
         },
         {
-          nombre: 'Overzide surfer verde',
-          precio: 118,
-          descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
+          nombre: 'Remera overzide surfer verde',
+          precio: 25000,
+          descripcion: 'Remera Oversize verde 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
           imagen: [
-            '/imagenes/catalogo/remera-verde-surfer.jpg',
+            '/imagenes/catalogo/remera-verde-surfer-1.jpg',
+            '/imagenes/catalogo/remera-verde-surfer-2.jpg',
+          ]
+        },
+        {
+          nombre: 'Remera overzide surfer blanca',
+          precio: 25000,
+          descripcion: 'Remera Oversize blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          imagen: [
+            '/imagenes/catalogo/remera-blanca-surfer-1.jpg',
+            '/imagenes/catalogo/remera-blanca-surfer-2.jpg',
           ]
         },
         {
           nombre: 'Musculosa la gran ola negra',
-          precio: 530,
-          descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
+          precio: 20000,
+          descripcion: 'Musculosa algodon peinado 30.1. Super liviana y fresca. Con nuestros diseños unicos.',
           imagen: [
             '/imagenes/catalogo/musculosa-negra-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-1.jpg',
@@ -309,8 +322,8 @@ export default defineComponent({
         },
         {
           nombre: 'Musculosa la gran ola marron',
-          precio: 580,
-          descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
+          precio: 20000,
+          descripcion: 'Musculosa algodon peinado 30.1. Super liviana y fresca. Con nuestros diseños unicos.',
           imagen: [
             '/imagenes/catalogo/musculosa-marron-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-1.jpg',
@@ -321,7 +334,7 @@ export default defineComponent({
       prodNuevos: [
         {
           nombre: 'Musculosa la gran ola negra',
-          precio: 530,
+          precio: 20000,
           descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
           imagen: [
             '/imagenes/catalogo/musculosa-negra-la-gran-ola.jpg',
@@ -331,7 +344,7 @@ export default defineComponent({
         },
         {
           nombre: 'Musculosa la gran ola marron',
-          precio: 580,
+          precio: 20000,
           descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
           imagen: [
             '/imagenes/catalogo/musculosa-marron-la-gran-ola.jpg',
