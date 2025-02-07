@@ -109,7 +109,7 @@
           </v-col>
         </v-row>
       </v-card-actions>
-      <h5 class="d-flex justify-center" style="color: #BDBDBD;">Consultar por stock disponible</h5>
+      <h5 class="d-flex justify-center" style="color: #BDBDBD;">Consultar por stock y y talles disponibles</h5>
     </v-card>
   </v-col>
 </v-row>
@@ -328,6 +328,40 @@ export default defineComponent({
             '/imagenes/catalogo/musculosa-marron-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-1.jpg',
             '/imagenes/banners/img-carousel-5.jpg'
+          ]
+        },
+        {
+          nombre: 'Remera basica negra Shark',
+          precio: 25000,
+          descripcion: 'Remera basica negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          imagen: [
+            '/imagenes/catalogo/remera-negra-shark-1.jpg',
+            '/imagenes/catalogo/remera-negra-shark-2.jpg',
+          ]
+        },
+        {
+          nombre: 'Remera basica blanca Shark',
+          precio: 25000,
+          descripcion: 'Remera basica blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          imagen: [
+          '/imagenes/catalogo/remera-blanca-shark-1.jpg',
+          '/imagenes/catalogo/remera-blanca-shark-2.jpg',
+          ]
+        },
+        {
+          nombre: 'Remera basica negra LGO',
+          precio: 25000,
+          descripcion: 'Remera basica negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          imagen: [
+          '/imagenes/catalogo/remera-negra-lgo-1.jpg',
+          ]
+        },
+        {
+          nombre: 'Remera basica blanca LGO',
+          precio: 25000,
+          descripcion: 'Remera basica blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          imagen: [
+            '/imagenes/catalogo/remera-blanca-lgo-1.jpg',
           ]
         }
       ],
