@@ -163,8 +163,8 @@ export default {
 
 /* Logo redondeado */
 .logo-img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   margin: 0; /* Sin márgenes adicionales */

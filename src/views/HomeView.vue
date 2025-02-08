@@ -371,6 +371,7 @@ export default defineComponent({
           imagen: [
             '/imagenes/catalogo/remera-negra-shark-1.jpg',
             '/imagenes/catalogo/remera-negra-shark-2.jpg',
+            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-3.jpg'
           ]
         },
         {
@@ -407,8 +408,7 @@ export default defineComponent({
           imagen: [
             '/imagenes/catalogo/musculosa-negra-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-1.jpg',
-            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-2.jpg',
-            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-3.jpg'
+            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-2.jpg'
           ]
         },
         {
@@ -430,6 +430,7 @@ export default defineComponent({
           imagen: [
             '/imagenes/catalogo/remera-negra-shark-1.jpg',
             '/imagenes/catalogo/remera-negra-shark-2.jpg',
+            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-3.jpg'
           ]
         },
         {
