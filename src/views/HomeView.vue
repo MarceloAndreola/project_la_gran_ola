@@ -116,15 +116,29 @@
       
       <!--TALLES DE REMERA-->
       <v-dialog v-model="dialog" max-width="400px">
-        <v-card>
-          <v-card-text>
-            <h3>Talles</h3>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ipsam tenetur aut harum laboriosam voluptatibus unde doloremque molestiae fugit?
-          </v-card-text>
+        <v-row>
+          <v-col
+          v-for="(prodTalles, index) in prodTalle"
+          :key="index"
+          >
+            <v-card>
+              <v-carousel
+              :show-arrows="true" 
+              >
+              <v-carousel-item
+              v-for="(imgTalles, imgTallesIndex) in prodTalles.imgTalles"
+              :key="imgTallesIndex"
+              :src="imgTalles"
+              ></v-carousel-item>
+
+              </v-carousel>
           <v-card-actions class="d-flex justify-center">
             <v-btn @click="dialog = false">Cerrar</v-btn>
           </v-card-actions>
-        </v-card>
+
+            </v-card>
+          </v-col>
+        </v-row>
       </v-dialog>
 
 
@@ -203,19 +217,33 @@
   </v-col>
 </v-row>
       
+      
       <!--TALLES DE REMERA-->
       <v-dialog v-model="dialog" max-width="400px">
-        <v-card>
-          <v-card-text>
-            <h3>Talles</h3>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis ipsam tenetur aut harum laboriosam voluptatibus unde doloremque molestiae fugit?
-          </v-card-text>
+        <v-row>
+          <v-col
+          v-for="(prodTalles, index) in prodTalle"
+          :key="index"
+          >
+            <v-card>
+              <v-carousel
+              :show-arrows="true" 
+              >
+              <v-carousel-item
+              v-for="(imgTalles, imgTallesIndex) in prodTalles.imgTalles"
+              :key="imgTallesIndex"
+              :src="imgTalles"
+              ></v-carousel-item>
+
+              </v-carousel>
           <v-card-actions class="d-flex justify-center">
             <v-btn @click="dialog = false">Cerrar</v-btn>
           </v-card-actions>
-        </v-card>
-      </v-dialog>
 
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-dialog>
      
   </v-container>
 </template>
@@ -384,8 +412,19 @@ export default defineComponent({
             '/imagenes/catalogo/musculosa-marron-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-1.jpg',
             '/imagenes/banners/img-carousel-5.jpg'
-          ]        }
+          ]        
+        }
+      ],
+      prodTalle: [
+        {
+          imgTalles: [
+          '/imagenes/banners/talles-remeras-oversize.jpg',
+          '/imagenes/banners/talles-remera-corte-basico.jpg',
+          '/imagenes/banners/talles-musculosas.jpg'
+          ]
+        }
       ]
+      
     };
   },
   computed: {
