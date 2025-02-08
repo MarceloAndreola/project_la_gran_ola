@@ -394,10 +394,10 @@ export default defineComponent({
         }
       ],
       prodNuevos: [
-        {
+      {
           nombre: 'Musculosa la gran ola negra',
           precio: 20000,
-          descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
+          descripcion: 'Musculosa algodon peinado 30.1. Super liviana y fresca. Con nuestros diseños unicos.',
           imagen: [
             '/imagenes/catalogo/musculosa-negra-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-1.jpg',
@@ -407,12 +407,46 @@ export default defineComponent({
         {
           nombre: 'Musculosa la gran ola marron',
           precio: 20000,
-          descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde nulla reiciendis incidunt amet officiis molestiae, saepe ab quisquam laborum exercitationem. Nisi nostrum voluptatibus illo porro laudantium sapiente, inventore maiores cupiditate.',
+          descripcion: 'Musculosa algodon peinado 30.1. Super liviana y fresca. Con nuestros diseños unicos.',
           imagen: [
             '/imagenes/catalogo/musculosa-marron-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-1.jpg',
             '/imagenes/banners/img-carousel-5.jpg'
-          ]        
+          ]
+        },
+        {
+          nombre: 'Remera basica negra Shark',
+          precio: 25000,
+          descripcion: 'Remera basica negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          imagen: [
+            '/imagenes/catalogo/remera-negra-shark-1.jpg',
+            '/imagenes/catalogo/remera-negra-shark-2.jpg',
+          ]
+        },
+        {
+          nombre: 'Remera basica blanca Shark',
+          precio: 25000,
+          descripcion: 'Remera basica blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          imagen: [
+          '/imagenes/catalogo/remera-blanca-shark-1.jpg',
+          '/imagenes/catalogo/remera-blanca-shark-2.jpg',
+          ]
+        },
+        {
+          nombre: 'Remera basica negra LGO',
+          precio: 25000,
+          descripcion: 'Remera basica negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          imagen: [
+          '/imagenes/catalogo/remera-negra-lgo-1.jpg',
+          ]
+        },
+        {
+          nombre: 'Remera basica blanca LGO',
+          precio: 25000,
+          descripcion: 'Remera basica blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          imagen: [
+            '/imagenes/catalogo/remera-blanca-lgo-1.jpg',
+          ]
         }
       ],
       prodTalle: [
@@ -451,24 +485,19 @@ export default defineComponent({
     margin: 0 2px;
   }
 
-
-
-
-
-
-  /* Pantallas hasta 576px */
+  
 @media (max-width: 576px) {
   body {
     font-size: 12px;
   }
   
   .cards_nuevas{
-    flex: 0 0 100% !important; /* Esto asegura el ancho específico */
+    flex: 0 0 100% !important;
     max-width: 100% !important;
   }
 
   .cards_catalogo {
-    flex: 0 0 100% !important; /* Esto asegura el ancho específico */
+    flex: 0 0 100% !important;
     max-width: 100% !important;
 }
 
@@ -482,31 +511,30 @@ export default defineComponent({
   }
 
   .cards_nuevas{
-    flex: 0 0 100% !important; /* Esto asegura el ancho específico */
+    flex: 0 0 100% !important;
     max-width: 100% !important;
   }
 
   .cards_catalogo {
-    flex: 0 0 100% !important; /* Esto asegura el ancho específico */
+    flex: 0 0 100% !important;
     max-width: 100% !important;
 }
 
 
 }
 
-/* Pantallas entre 769px y 992px */
 @media (min-width: 769px) and (max-width: 992px) {
   body {
     font-size: 18px;
   }
 
   .cards_nuevas{
-    flex: 0 0 50% !important; /* Esto asegura el ancho específico */
+    flex: 0 0 50% !important;
     max-width: 50% !important;
   }
 
   .cards_catalogo {
-    flex: 0 0 50% !important; /* Esto asegura el ancho específico */
+    flex: 0 0 50% !important;
     max-width: 50% !important;
 }
 
@@ -516,19 +544,18 @@ export default defineComponent({
 
 }
 
-/* Pantallas entre 993px y 1200px */
 @media (min-width: 993px) and (max-width: 1200px) {
   body {
     font-size: 20px;
   }
 
   .cards_nuevas{
-    flex: 0 0 40% !important; /* Esto asegura el ancho específico */
+    flex: 0 0 40% !important;
     max-width: 40% !important;
   }
 
   .cards_catalogo {
-    flex: 0 0 40% !important; /* Esto asegura el ancho específico */
+    flex: 0 0 40% !important;
     max-width: 40% !important;
     justify-content: center !important;
 }
@@ -538,19 +565,18 @@ export default defineComponent({
   }
 }
 
-/* Pantallas de más de 1201px */
 @media (min-width: 1201px) {
   body {
     font-size: 22px;
   }
   
   .cards_nuevas{
-    flex: 0 0 30% !important; /* Esto asegura el ancho específico */
+    flex: 0 0 30% !important;
     max-width: 30% !important;
   }
 
   .cards_catalogo {
-    flex: 0 0 40% !important; /* Esto asegura el ancho específico */
+    flex: 0 0 40% !important;
     max-width: 40% !important;
     justify-content: center !important;
 
