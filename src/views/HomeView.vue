@@ -274,6 +274,9 @@ export default defineComponent({
           },
           {
             src: '/imagenes/banners/img-carousel-9.jpg',
+          },
+          {
+            src: '/imagenes/banners/img-carousel-10.jpg',
           }
         ],
       productos: [
@@ -290,9 +293,9 @@ export default defineComponent({
             ]
         },
         {
-          nombre: 'Remera overzide Hula blanca',
+          nombre: 'Remera oversize Hula tiza',
           precio: 25000,
-          descripcion: 'Remera Oversize blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera Oversize color tiza 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
           imagen: [
             '/imagenes/catalogo/remera-blanca-ula-1.jpg',
             '/imagenes/catalogo/remera-blanca-ula-2.jpg',
@@ -300,7 +303,7 @@ export default defineComponent({
           ]
         },
         {
-          nombre: 'Remera overzide Hula verde',
+          nombre: 'Remera oversize Hula verde',
           precio: 25000,
           descripcion: 'Remera Oversize verde 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
           imagen: [
@@ -310,7 +313,7 @@ export default defineComponent({
           ]
         },
         {
-          nombre: 'Remera overzide surfer negra',
+          nombre: 'Remera oversize surfer negra',
           precio: 25000,
           descripcion: 'Remera Oversize negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
           imagen: [
@@ -321,7 +324,7 @@ export default defineComponent({
           ]
         },
         {
-          nombre: 'Remera overzide surfer verde',
+          nombre: 'Remera oversize surfer verde',
           precio: 25000,
           descripcion: 'Remera Oversize verde 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
           imagen: [
@@ -330,9 +333,9 @@ export default defineComponent({
           ]
         },
         {
-          nombre: 'Remera overzide surfer blanca',
+          nombre: 'Remera oversize surfer tiza',
           precio: 25000,
-          descripcion: 'Remera Oversize blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera Oversize color tiza 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
           imagen: [
             '/imagenes/catalogo/remera-blanca-surfer-1.jpg',
             '/imagenes/catalogo/remera-blanca-surfer-2.jpg',
@@ -345,7 +348,8 @@ export default defineComponent({
           imagen: [
             '/imagenes/catalogo/musculosa-negra-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-1.jpg',
-            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-2.jpg'
+            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-2.jpg',
+            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-3.jpg'
           ]
         },
         {
@@ -355,6 +359,8 @@ export default defineComponent({
           imagen: [
             '/imagenes/catalogo/musculosa-marron-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-1.jpg',
+            '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-2.jpg',
+            '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-3.jpg',
             '/imagenes/banners/img-carousel-5.jpg'
           ]
         },
@@ -401,7 +407,8 @@ export default defineComponent({
           imagen: [
             '/imagenes/catalogo/musculosa-negra-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-1.jpg',
-            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-2.jpg'
+            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-2.jpg',
+            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-3.jpg'
           ]
         },
         {
@@ -411,6 +418,8 @@ export default defineComponent({
           imagen: [
             '/imagenes/catalogo/musculosa-marron-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-1.jpg',
+            '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-2.jpg',
+            '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-3.jpg',
             '/imagenes/banners/img-carousel-5.jpg'
           ]
         },
