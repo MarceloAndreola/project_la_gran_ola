@@ -87,7 +87,8 @@
           :src="imagen"
           cover
         ></v-carousel-item>
-      </v-carousel>      
+      </v-carousel>   
+
       <!-- Título -->
       <v-card-title class="text-center bg-azul">
         <h3>{{ producto.nombre }}</h3>
@@ -104,8 +105,8 @@
           <v-col cols="6">
             <h3>Precio: {{ producto.precio }}</h3>
           </v-col>
-          <v-col cols="6" class="d-flex justify-end">
-            <v-btn class="bg-info" @click="dialog = true">Guía de talles</v-btn>
+            <v-col cols="6" class="d-flex justify-end">
+            <v-btn class="bg-info" @click="abrirGuiaTalles(producto.guiaTalle)">Guía de talles</v-btn>          
           </v-col>
         </v-row>
       </v-card-actions>
@@ -114,33 +115,18 @@
   </v-col>
 </v-row>
       
-      <!--TALLES DE REMERA-->
-      <v-dialog v-model="dialog" max-width="400px">
-        <v-row>
-          <v-col
-          v-for="(prodTalles, index) in prodTalle"
-          :key="index"
-          >
-            <v-card>
-              <v-carousel
-              :show-arrows="true" 
-              >
-              <v-carousel-item
-              v-for="(imgTalles, imgTallesIndex) in prodTalles.imgTalles"
-              :key="imgTallesIndex"
-              :src="imgTalles"
-              ></v-carousel-item>
-
-              </v-carousel>
-          <v-card-actions class="d-flex justify-center">
-            <v-btn @click="dialog = false">Cerrar</v-btn>
-          </v-card-actions>
-
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-dialog>
-
+<!-- DIALOG PARA GUIA DE TALLES -->
+<v-dialog v-model="dialog" max-width="400px">
+  <v-card>
+    <v-card-title class="text-center">Guía de talles</v-card-title>
+    <v-card-text class="d-flex justify-center">
+      <v-img :src="imagenSeleccionada" max-height="400" contain></v-img>
+    </v-card-text>
+    <v-card-actions class="d-flex justify-center">
+      <v-btn @click="dialog = false">Cerrar</v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
 
     <!--TEXTO NUEVOS LANZAMIENTOS-->
     <v-container class="text-center mt-4 mb-4">
@@ -259,6 +245,7 @@ export default defineComponent({
       dialog: false,
       filtrar: false,
       filtroSeleccionado: '',
+      imagenSeleccionada: '',
       img_principal: [
           {
             src: '/imagenes/banners/imagen-carousel-2.jpg',
@@ -290,7 +277,8 @@ export default defineComponent({
             '/imagenes/catalogo/remera-negra-ula-modelo-1.jpg',
             '/imagenes/catalogo/remera-negra-ula-modelo-2.jpg',
             '/imagenes/catalogo/remera-negra-ula-modelo-3.jpg'
-            ]
+            ],
+            guiaTalle: '/imagenes/banners/talles-remeras-oversize.jpg'
         },
         {
           nombre: 'Remera oversize Hula tiza',
@@ -459,15 +447,6 @@ export default defineComponent({
             '/imagenes/catalogo/remera-blanca-lgo-1.jpg',
           ]
         }
-      ],
-      prodTalle: [
-        {
-          imgTalles: [
-          '/imagenes/banners/talles-remeras-oversize.jpg',
-          '/imagenes/banners/talles-remera-corte-basico.jpg',
-          '/imagenes/banners/talles-musculosas.jpg'
-          ]
-        }
       ]
       
     };
@@ -482,6 +461,12 @@ export default defineComponent({
         listProductos.sort((a,b) => b.precio - a.precio)
       }
       return listProductos;
+    }
+},
+methods: {
+  abrirGuiaTalles(imagen) {
+      this.imagenSeleccionada = imagen;
+      this.dialog = true;
     }
 },
 
@@ -515,7 +500,6 @@ export default defineComponent({
 
 }
 
-/* Pantallas entre 577px y 768px */
 @media (min-width: 577px) and (max-width: 768px) {
   body {
     font-size: 16px;
@@ -587,8 +571,8 @@ export default defineComponent({
   }
 
   .cards_catalogo {
-    flex: 0 0 40% !important;
-    max-width: 40% !important;
+    flex: 0 0 30% !important;
+    max-width: 30% !important;
     justify-content: center !important;
 
 }
