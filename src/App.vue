@@ -16,7 +16,7 @@
           class="logo-img"
         ></v-img>
         <!-- Título -->
-        <span class="app-title">La gran ola</span>
+        <span class="app-title">La Gran Ola</span>
       </div>
 
       <v-spacer></v-spacer>
@@ -85,7 +85,7 @@
           </v-btn>
         </v-col>
         <v-col class="text-center">
-          <span>© 2025 La gran ola | Todos los derechos reservados | Hecho por: Marcelo Andreola</span>
+          <span>© 2025 La Gran Ola | Todos los derechos reservados | Hecho por: Marcelo Andreola</span>
         </v-col>
       </v-row>
     </v-footer>
@@ -108,7 +108,7 @@ export default {
       ],
       barraLat: [
       {
-        seleccion: 'Catalogo',
+        seleccion: 'Catálogo',
         to: '#catalogo',
       },
       {

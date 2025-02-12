@@ -20,7 +20,7 @@
     <v-container class="text-center mb-2 bg-info">
       <v-row>
         <v-col>
-          <h1 id="catalogo">Catalogo</h1>
+          <h1 id="catalogo">Catálogo</h1>
         </v-col>
       </v-row>
     </v-container>
@@ -29,7 +29,7 @@
       <!--FILTER-->
       <v-row justify="center">
         <v-col cols="12" class="d-flex justify-center">
-          <v-btn class="bg-azul" @click="filtrar=true"> Filter
+          <v-btn class="bg-azul" @click="filtrar=true"> Filtro
             <v-icon class="ml-2">mdi-tune</v-icon>
           </v-btn>
         </v-col>
@@ -43,10 +43,10 @@
             <v-select
             v-model="filtroSeleccionado"
             :items="[
-              'Precio: Menor a Mayor', 
-              'Precio: Mayor a Menor',
+              'Precio: de menor a mayor', 
+              'Precio: de mayor a menor',
               ]"
-            label="Seleccionar filtro"
+            label="Seleccionar un filtro"
             dense
             >
             </v-select>          
@@ -110,7 +110,7 @@
           </v-col>
         </v-row>
       </v-card-actions>
-      <h5 class="d-flex justify-center" style="color: #BDBDBD;">Consultar por stock y y talles disponibles</h5>
+      <h5 class="d-flex justify-center" style="color: #BDBDBD;">Consultar por stock y talles disponibles</h5>
     </v-card>
   </v-col>
 </v-row>
@@ -194,7 +194,7 @@
             <h3>Precio: {{ prodNew.precio }}</h3>
           </v-col>
           <v-col cols="6" class="d-flex justify-end">
-            <v-btn class="bg-info" @click="dialog = true">Guía de talles</v-btn>
+            <v-btn class="bg-info" @click="abrirGuiaTalles(prodNew.guiaTalle)">Guía de talles</v-btn>          
           </v-col>
         </v-row>
       </v-card-actions>
@@ -204,32 +204,18 @@
 </v-row>
       
       
-      <!--TALLES DE REMERA-->
-      <v-dialog v-model="dialog" max-width="400px">
-        <v-row>
-          <v-col
-          v-for="(prodTalles, index) in prodTalle"
-          :key="index"
-          >
-            <v-card>
-              <v-carousel
-              :show-arrows="true" 
-              >
-              <v-carousel-item
-              v-for="(imgTalles, imgTallesIndex) in prodTalles.imgTalles"
-              :key="imgTallesIndex"
-              :src="imgTalles"
-              ></v-carousel-item>
-
-              </v-carousel>
-          <v-card-actions class="d-flex justify-center">
-            <v-btn @click="dialog = false">Cerrar</v-btn>
-          </v-card-actions>
-
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-dialog>
+<!-- DIALOG PARA GUIA DE TALLES -->
+<v-dialog v-model="dialog" max-width="400px">
+  <v-card>
+    <v-card-title class="text-center">Guía de talles</v-card-title>
+    <v-card-text class="d-flex justify-center">
+      <v-img :src="imagenSeleccionada" max-height="400" contain></v-img>
+    </v-card-text>
+    <v-card-actions class="d-flex justify-center">
+      <v-btn @click="dialog = false">Cerrar</v-btn>
+    </v-card-actions>
+  </v-card>
+</v-dialog>
      
   </v-container>
 </template>
@@ -270,7 +256,7 @@ export default defineComponent({
         {
           nombre: 'Remera oversize Hula negra',
           precio: 25000,
-          descripcion: 'Remera Oversize negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera oversize negra 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
             '/imagenes/catalogo/remera-negra-ula-1.jpg',
             '/imagenes/catalogo/remera-negra-ula-2.jpg',
@@ -283,169 +269,192 @@ export default defineComponent({
         {
           nombre: 'Remera oversize Hula tiza',
           precio: 25000,
-          descripcion: 'Remera Oversize color tiza 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera oversize tiza 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
             '/imagenes/catalogo/remera-blanca-ula-1.jpg',
             '/imagenes/catalogo/remera-blanca-ula-2.jpg',
             '/imagenes/catalogo/remera-blanca-ula-modelo-1.jpg'
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remeras-oversize.jpg'
+
         },
         {
           nombre: 'Remera oversize Hula verde',
           precio: 25000,
-          descripcion: 'Remera Oversize verde 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera oversize verde 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
             '/imagenes/catalogo/remera-verde-ula-1.jpg',
             '/imagenes/catalogo/remera-verde-ula-2.jpg',
             '/imagenes/catalogo/remera-verde-ula-modelo-1.jpg'
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remeras-oversize.jpg'
+
         },
         {
           nombre: 'Remera oversize surfer negra',
           precio: 25000,
-          descripcion: 'Remera Oversize negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera oversize negra 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
             '/imagenes/catalogo/remera-negra-surfer-1.jpg',
             '/imagenes/catalogo/remera-negra-surfer-2.jpg',
             '/imagenes/catalogo/remera-negra-surfer-modelo-1.jpg',
             '/imagenes/catalogo/remera-negra-surfer-modelo-2.jpg'
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remeras-oversize.jpg'
+
         },
         {
           nombre: 'Remera oversize surfer verde',
           precio: 25000,
-          descripcion: 'Remera Oversize verde 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera oversize verde 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
             '/imagenes/catalogo/remera-verde-surfer-1.jpg',
             '/imagenes/catalogo/remera-verde-surfer-2.jpg',
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remeras-oversize.jpg'
+
         },
         {
           nombre: 'Remera oversize surfer tiza',
           precio: 25000,
-          descripcion: 'Remera Oversize color tiza 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera oversize tiza 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
             '/imagenes/catalogo/remera-blanca-surfer-1.jpg',
             '/imagenes/catalogo/remera-blanca-surfer-2.jpg',
             '/imagenes/catalogo/remera-blanca-surfer-modelo-1.jpg',
             '/imagenes/catalogo/remera-blanca-surfer-modelo-2.jpg',
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remeras-oversize.jpg'
+
         },
         {
-          nombre: 'Musculosa la gran ola negra',
+          nombre: 'Musculosa La Gran Ola negra',
           precio: 20000,
-          descripcion: 'Musculosa algodon peinado 30.1. Super liviana y fresca. Con nuestros diseños unicos.',
+          descripcion: 'Musculosa algodón peinado 30/1. Súper liviana y fresca. Con nuestros diseños únicos.',
           imagen: [
             '/imagenes/catalogo/musculosa-negra-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-1.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-2.jpg',
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-musculosas.jpg'
+
         },
         {
-          nombre: 'Musculosa la gran ola marron',
+          nombre: 'Musculosa La Gran Ola marron',
           precio: 20000,
-          descripcion: 'Musculosa algodon peinado 30.1. Super liviana y fresca. Con nuestros diseños unicos.',
+          descripcion: 'Musculosa algodón peinado 30/1. Súper liviana y fresca. Con nuestros diseños únicos.',
           imagen: [
             '/imagenes/catalogo/musculosa-marron-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-1.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-2.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-3.jpg',
             '/imagenes/banners/img-carousel-5.jpg'
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-musculosas.jpg'
         },
         {
-          nombre: 'Remera basica negra Shark',
+          nombre: 'Remera básica negra Shark',
           precio: 25000,
-          descripcion: 'Remera basica negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera básica negra 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
             '/imagenes/catalogo/remera-negra-shark-1.jpg',
             '/imagenes/catalogo/remera-negra-shark-2.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-3.jpg'
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remera-corte-basico.jpg'
         },
         {
-          nombre: 'Remera basica blanca Shark',
+          nombre: 'Remera básica blanca Shark',
           precio: 25000,
-          descripcion: 'Remera basica blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera básica blanca 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
           '/imagenes/catalogo/remera-blanca-shark-1.jpg',
           '/imagenes/catalogo/remera-blanca-shark-2.jpg',
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remera-corte-basico.jpg'
         },
         {
-          nombre: 'Remera basica negra LGO',
+          nombre: 'Remera básica negra LGO',
           precio: 25000,
-          descripcion: 'Remera basica negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera básica negra 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
           '/imagenes/catalogo/remera-negra-lgo-1.jpg',
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remera-corte-basico.jpg'
         },
         {
-          nombre: 'Remera basica blanca LGO',
+          nombre: 'Remera básica blanca LGO',
           precio: 25000,
-          descripcion: 'Remera basica blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera básica blanca 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
             '/imagenes/catalogo/remera-blanca-lgo-1.jpg',
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remera-corte-basico.jpg'
         }
       ],
       prodNuevos: [
       {
-          nombre: 'Musculosa la gran ola negra',
+          nombre: 'Musculosa La Gran Ola negra',
           precio: 20000,
-          descripcion: 'Musculosa algodon peinado 30.1. Super liviana y fresca. Con nuestros diseños unicos.',
+          descripcion: 'Musculosa algodón peinado 30/1. Súper liviana y fresca. Con nuestros diseños únicos.',
           imagen: [
             '/imagenes/catalogo/musculosa-negra-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-1.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-2.jpg'
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-musculosas.jpg'
         },
         {
-          nombre: 'Musculosa la gran ola marron',
+          nombre: 'Musculosa La Gran Ola marron',
           precio: 20000,
-          descripcion: 'Musculosa algodon peinado 30.1. Super liviana y fresca. Con nuestros diseños unicos.',
+          descripcion: 'Musculosa algodón peinado 30/1. Súper liviana y fresca. Con nuestros diseños únicos.',
           imagen: [
             '/imagenes/catalogo/musculosa-marron-la-gran-ola.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-1.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-2.jpg',
             '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-3.jpg',
             '/imagenes/banners/img-carousel-5.jpg'
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-musculosas.jpg'
         },
         {
-          nombre: 'Remera basica negra Shark',
+          nombre: 'Remera básica negra Shark',
           precio: 25000,
-          descripcion: 'Remera basica negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera básica negra 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
             '/imagenes/catalogo/remera-negra-shark-1.jpg',
             '/imagenes/catalogo/remera-negra-shark-2.jpg',
             '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-3.jpg'
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remera-corte-basico.jpg'
         },
         {
-          nombre: 'Remera basica blanca Shark',
+          nombre: 'Remera básica blanca Shark',
           precio: 25000,
-          descripcion: 'Remera basica blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera básica blanca 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
           '/imagenes/catalogo/remera-blanca-shark-1.jpg',
           '/imagenes/catalogo/remera-blanca-shark-2.jpg',
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remera-corte-basico.jpg'
         },
         {
-          nombre: 'Remera basica negra LGO',
+          nombre: 'Remera básica negra LGO',
           precio: 25000,
-          descripcion: 'Remera basica negra 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera básica negra 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
           '/imagenes/catalogo/remera-negra-lgo-1.jpg',
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remera-corte-basico.jpg'
         },
         {
-          nombre: 'Remera basica blanca LGO',
+          nombre: 'Remera básica blanca LGO',
           precio: 25000,
-          descripcion: 'Remera basica blanca 100% algodon peinado 24/1 perfecta para quienes buscan comodidad y calidad. Ideal para tu dia a dia con diseños unicos',
+          descripcion: 'Remera básica blanca 100% algodón peinado 24/1, perfecta para quienes buscan comodidad y calidad. Ideal para tu día a día con diseños únicos.',
           imagen: [
             '/imagenes/catalogo/remera-blanca-lgo-1.jpg',
-          ]
+          ],
+          guiaTalle: '/imagenes/banners/talles-remera-corte-basico.jpg'
         }
       ]
       
