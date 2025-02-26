@@ -249,7 +249,7 @@ export default defineComponent({
             src: '/imagenes/banners/img-carousel-9.jpg',
           },
           {
-            src: '/imagenes/banners/img-carousel-10.jpg',
+            src: '/imagenes/banners/img-carousel-11.jpg',
           }
         ],
       productos: [
@@ -390,33 +390,32 @@ export default defineComponent({
             '/imagenes/catalogo/remera-blanca-lgo-1.jpg',
           ],
           guiaTalle: '/imagenes/banners/talles-remera-corte-basico.jpg'
-        }
-      ],
-      prodNuevos: [
-      {
-          nombre: 'Musculosa La Gran Ola negra',
+        },
+        {
+          nombre: 'Musculosa LGO negra',
           precio: 20000,
           descripcion: 'Musculosa algodón peinado 30/1. Súper liviana y fresca. Con nuestros diseños únicos.',
-          imagen: [
-            '/imagenes/catalogo/musculosa-negra-la-gran-ola.jpg',
-            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-1.jpg',
-            '/imagenes/catalogo/musculosa-negra-la-gran-ola-modelo-2.jpg'
+          imagen : [
+            '/imagenes/catalogo/musculosa-lgo-negra-1.jpg',
+            '/imagenes/catalogo/musculosa-lgo-negra-2.jpg',
+            '/imagenes/catalogo/musculosa-lgo-negra-modelo-1.jpg',
           ],
           guiaTalle: '/imagenes/banners/talles-musculosas.jpg'
         },
         {
-          nombre: 'Musculosa La Gran Ola marron',
+          nombre: 'Musculosa LGO blanca',
           precio: 20000,
           descripcion: 'Musculosa algodón peinado 30/1. Súper liviana y fresca. Con nuestros diseños únicos.',
-          imagen: [
-            '/imagenes/catalogo/musculosa-marron-la-gran-ola.jpg',
-            '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-1.jpg',
-            '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-2.jpg',
-            '/imagenes/catalogo/musculosa-marron-la-gran-ola-modelo-3.jpg',
-            '/imagenes/banners/img-carousel-5.jpg'
+          imagen : [
+            '/imagenes/catalogo/musculosa-lgo-blanca-1.jpg',
+            '/imagenes/catalogo/musculosa-lgo-blanca-2.jpg',
+            '/imagenes/catalogo/musculosa-lgo-blanca-modelo-1.jpg',
           ],
           guiaTalle: '/imagenes/banners/talles-musculosas.jpg'
-        },
+        }
+
+      ],
+      prodNuevos: [
         {
           nombre: 'Remera básica negra Shark',
           precio: 25000,
@@ -455,6 +454,28 @@ export default defineComponent({
             '/imagenes/catalogo/remera-blanca-lgo-1.jpg',
           ],
           guiaTalle: '/imagenes/banners/talles-remera-corte-basico.jpg'
+        },
+        {
+          nombre: 'Musculosa LGO negra',
+          precio: 20000,
+          descripcion: 'Musculosa algodón peinado 30/1. Súper liviana y fresca. Con nuestros diseños únicos.',
+          imagen : [
+            '/imagenes/catalogo/musculosa-lgo-negra-1.jpg',
+            '/imagenes/catalogo/musculosa-lgo-negra-2.jpg',
+            '/imagenes/catalogo/musculosa-lgo-negra-modelo-1.jpg',
+          ],
+          guiaTalle: '/imagenes/banners/talles-musculosas.jpg'
+        },
+        {
+          nombre: 'Musculosa LGO blanca',
+          precio: 20000,
+          descripcion: 'Musculosa algodón peinado 30/1. Súper liviana y fresca. Con nuestros diseños únicos.',
+          imagen : [
+            '/imagenes/catalogo/musculosa-lgo-blanca-1.jpg',
+            '/imagenes/catalogo/musculosa-lgo-blanca-2.jpg',
+            '/imagenes/catalogo/musculosa-lgo-blanca-modelo-1.jpg',
+          ],
+          guiaTalle: '/imagenes/banners/talles-musculosas.jpg'
         }
       ]
       
